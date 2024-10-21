@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard do Clima</title>
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+  <div class="main">
+    <h1>Dashboard do Clima</h1>
+
+    <h2>Adicionar nova cidade:</h2>
+
+    <div class="input-container">
+      <div class="input-container__inner">
+        <input type="text" id="cityInput" placeholder="Digite nome da cidade" />
+        <button id="sendButton" disabled>Enviar</button>
+      </div>
+
+    </div>
+
+    <h2>Dados do Clima:</h2>
+    <div id="cardsContainer"></div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="./script.js"></script>
+</body>
+
+</html>

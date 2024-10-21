@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.main {
+  margin: 20px;
+  display: grid;
+  grid-template-rows: 36px 67px 100px 1fr;
+}
+
+.input-container {
+  width: 100%;
+  max-width: 600px;
+  padding: 20px 0 20px 0;
+  justify-self: center;
+}
+
+.input-container .input-container__inner {
+  display: flex;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"] {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 25px;
+}
+
+input[type="text"]::placeholder {
+  color: #aaa;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 25px;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: background-color 0.3s;
+}
+
+button:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
+
+button:hover:enabled {
+  background-color: #0056b3;
+}
+
+#cardsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+h2 {
+  margin: 20px 0 20px 0;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: 50px 50px 70px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  background-color: #f9f9f9;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card p:nth-child(2) {
+  grid-row: 1;
+  font-size: 1.8rem;
+  align-self: center;
+}
+
+.card h3 {
+  grid-row: 2;
+}
+
+.card img {
+  grid-row: 1;
+  grid-column: 2;
+  justify-self: end;
+}
+
+.card .card-info {
+  grid-row: 3;
+  grid-column: 1 / -1;
+}
+
+.card .card-info p {
+  font-size: 0.78rem;
+  padding: 5px 0 5px 0;
+}
