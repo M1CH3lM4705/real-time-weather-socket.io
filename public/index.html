@@ -10,22 +10,30 @@
 </head>
 
 <body>
-  <div class="main">
-    <h1>Dashboard do Clima</h1>
+  <h1>Dashboards RT</h1>
+  <main class="main">
+    <div class="weather">
+      <h2>Dashboard do Clima</h2>
+      <h3>Adicionar nova cidade:</h3>
 
-    <h2>Adicionar nova cidade:</h2>
+      <div class="input-container">
+        <div class="input-container__inner">
+          <input type="text" id="cityInput" placeholder="Digite nome da cidade" />
+          <button id="sendButton" disabled>Enviar</button>
+        </div>
 
-    <div class="input-container">
-      <div class="input-container__inner">
-        <input type="text" id="cityInput" placeholder="Digite nome da cidade" />
-        <button id="sendButton" disabled>Enviar</button>
       </div>
 
+      <h3>Dados do Clima:</h3>
+      <div id="cardsContainer"></div>
     </div>
 
-    <h2>Dados do Clima:</h2>
-    <div id="cardsContainer"></div>
-  </div>
+    <div class="news">
+      <h2>Noticias</h2>
+      <h3>Lista de noticias:</h3>
+      <div id="cardsContainer2"></div>
+    </div>
+  </main>
 
   <script src="/socket.io/socket.io.js"></script>
   <script src="./script.js"></script>

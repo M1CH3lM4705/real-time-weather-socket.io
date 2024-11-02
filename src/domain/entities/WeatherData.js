@@ -2,7 +2,7 @@ const DateValue = require('../valueObjects/DateValue');
 
 class WeatherData {
   constructor(data) {
-    // Location properties
+
     this.location = {
       name: data.location.name,
       region: data.location.region,
@@ -14,7 +14,7 @@ class WeatherData {
       localtime: data.location.localtime
     };
 
-    // Current weather properties
+
     this.current = {
       lastUpdatedEpoch: data.current.last_updated_epoch,
       lastUpdated: data.current.last_updated,
@@ -58,7 +58,7 @@ class WeatherData {
     this.current.tempC = this.getFormattedTemp();
     this.current.heatindexC = `${this.current.heatindexC.toFixed(0)}°C`
   }
-  // Example method to get a formatted temperature string
+
   getFormattedTemp(isCelsius = true) {
     const temp = isCelsius ? this.current.tempC : this.current.tempF;
     return `${temp.toFixed(0)}°${isCelsius ? 'C' : 'F'}`;
